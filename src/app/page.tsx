@@ -1,13 +1,16 @@
-"use client"
-import Banner from "@/components/pages/homeAssembly/Banner/Banner";
-import CardPage from "@/ui/card/CardPage";
-import React from "react";
+"use client";
+import Banner from "@/components/pages/Banner/Banner";
+import Polular from "@/components/pages/popular/Polular";
+import TopRated from "@/components/pages/topReted/topRated";
+import Trending from "@/components/pages/trending/Trending";
 
 const page = () => {
   return (
     <div>
       <Banner />
-      <CardPage/>
+      <Trending/>
+      <Polular/>
+      <TopRated/>
     </div>
   );
 };

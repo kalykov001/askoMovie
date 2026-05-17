@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  min-width: 130px;
+
+  img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(212, 41, 117, 0.4);
+    transition: border-color 0.2s;
+
+    &:hover {
+      border-color: #d42975;
+    }
+
+    @media (max-width: 480px) {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  h4 {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  h5 {
+    color: #858c98;
+    font-size: 12px;
+  }
+}

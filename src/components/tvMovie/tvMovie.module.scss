@@ -1,0 +1,54 @@
+.container {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  min-height: 100vh;
+
+  .mainContainer {
+    .tvTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-block: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      h3 {
+        font-size: clamp(1.1rem, 1rem + 0.5vw, 1.5rem);
+        color: white;
+      }
+
+      .selected {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+
+        select {
+          height: 40px;
+          min-width: 140px;
+          color: white;
+          background: #173d77;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 8px;
+          padding: 0 12px;
+          font-size: 14px;
+          cursor: pointer;
+          outline: none;
+
+          option {
+            background: #0a1f3d;
+            color: white;
+          }
+
+          &:focus {
+            border-color: #d72b6e;
+          }
+
+          @media (max-width: 480px) {
+            min-width: 120px;
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}

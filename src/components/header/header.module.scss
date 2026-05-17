@@ -1,50 +1,215 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
 .container {
-  background: rgba(0, 0, 0, 0.384);
-  padding-block: 10px;
+  background: rgba(4, 21, 45, 0.92);
+  backdrop-filter: blur(8px);
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 100;
 
   .mainContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-block: 10px;
 
     .startHeader {
+      cursor: pointer;
       display: flex;
       align-items: center;
-      font-family: "Permanent Marker", cursive;
-      font-size: 26px;
+      gap: 8px;
+      font-size: 22px;
       font-weight: 900;
       background: linear-gradient(-70deg, #b618ba, #d72b6e);
+      font-family: "Permanent Marker", cursive;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       -webkit-text-fill-color: transparent;
 
       img {
-        width: 50px;
-        height: 50px;
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
       }
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 40px;
+      gap: 32px;
       color: white;
 
-      span {
-        font-size: 25px;
+      p {
         cursor: pointer;
-        transition: 0.3s ease;
+        font-size: 15px;
+        transition: color 0.2s;
 
         &:hover {
           color: #d72b6e;
         }
+      }
+
+      span {
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #d72b6e;
+        }
+      }
+
+      @media (max-width: 640px) {
+        display: none;
+      }
+    }
+
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 4px;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 640px) {
+        display: flex;
+      }
+    }
+  }
+
+  .headerSearch {
+    background: rgba(2, 12, 27, 0.96);
+    padding-block: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    .searchInner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      input {
+        flex: 1;
+        height: 44px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.07);
+        color: white;
+        padding: 0 16px;
+        font-size: 15px;
+        outline: none;
+
+        &::placeholder {
+          color: #8896a8;
+        }
+
+        &:focus {
+          border-color: #d72b6e;
+        }
+      }
+
+      .cancelOrSearch {
+        display: flex;
+        gap: 8px;
+
+        button {
+          height: 44px;
+          padding: 0 20px;
+          border-radius: 8px;
+          border: none;
+          cursor: pointer;
+          font-size: 14px;
+          font-weight: 600;
+          background: linear-gradient(90deg, #b618ba, #d72b6e);
+          color: white;
+          transition: opacity 0.2s;
+
+          &:hover {
+            opacity: 0.85;
+          }
+        }
+
+        .cancel {
+          background: rgba(255, 255, 255, 0.1);
+          color: white;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.18);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .mobileMenu {
+    display: none;
+    background: rgba(2, 12, 27, 0.98);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px 24px;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (max-width: 640px) {
+      display: flex;
+    }
+
+    p {
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transition: color 0.2s;
+
+      &:hover {
+        color: #d72b6e;
+      }
+    }
+
+    .mobileSearch {
+      display: flex;
+      gap: 8px;
+      padding-top: 4px;
+
+      input {
+        flex: 1;
+        height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.07);
+        color: white;
+        padding: 0 14px;
+        font-size: 14px;
+        outline: none;
+
+        &::placeholder {
+          color: #8896a8;
+        }
+
+        &:focus {
+          border-color: #d72b6e;
+        }
+      }
+
+      button {
+        height: 42px;
+        padding: 0 18px;
+        border-radius: 8px;
+        border: none;
+        background: linear-gradient(90deg, #b618ba, #d72b6e);
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
       }
     }
   }
