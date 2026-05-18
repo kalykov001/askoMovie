@@ -18,7 +18,7 @@ export default function AboutMovie() {
   const mediaType = pathname.includes("tv") ? "tv" : "movie";
   const { data: oneMovie } = useOneMovie(mediaType, id);
   const { data: actors } = getCredits(id);
-  const { data: videos } = useGetVideos(id);
+  const { data: videos } = useGetVideos(id, mediaType);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const formatRuntime = (runtime: number) => {
